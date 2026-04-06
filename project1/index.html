@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecodeLab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrap">
+            <a href="index.html" class="brand">DecodeLab</a>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#courses">Courses</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="theme-btn" id="themeBtn" type="button">Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="video-wrap" aria-hidden="true">
+                <video id="bg-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+                    <source src="images/6804109-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="wrap hero-grid">
+                <div class="hero-text">
+                   <span class="span-text"><p class="tag">Learn smarter, build faster</p></span> 
+                    <h1>Simple coding courses with practical projects</h1>
+                    <p class="hero-copy">DecodeLab helps beginners learn web development with guided lessons, small milestones, and hands-on practice that feels clear and manageable.</p>
+                    <div class="hero-actions">
+                        <a href="#courses" class="btn btn-main">See Courses</a>
+                        <button class="btn btn-light" id="infoBtn" type="button">Why students like it</button>
+                    </div>
+                    <div class="extra-box" id="extraBox">
+                        <p>Students get structured lessons, portfolio projects, and mentor feedback in one simple learning flow.</p>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="card-top">
+                        <span>Weekly Progress</span>
+                        <strong>78%</strong>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-fill"></div>
+                    </div>
+                    <div class="card-list">
+                        <div class="item">
+                            <span>HTML Basics</span>
+                            <strong>Done</strong>
+                        </div>
+                        <div class="item">
+                            <span>Responsive CSS</span>
+                            <strong>Running</strong>
+                        </div>
+                        <div class="item">
+                            <span>JavaScript DOM</span>
+                            <strong>Next</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="tag">What you get</p>
+                    <h2>A clean learning path for beginners</h2>
+                </div>
+                <div class="grid three">
+                    <article class="box">
+                        <h3>Short lessons</h3>
+                        <p>Concepts are broken into simple steps so learners can focus without feeling lost.</p>
+                    </article>
+                    <article class="box">
+                        <h3>Real practice</h3>
+                        <p>Each topic includes a mini task that turns theory into something you can build.</p>
+                    </article>
+                    <article class="box">
+                        <h3>Personal pace</h3>
+                        <p>Study on your own schedule while still following a clear roadmap.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses" id="courses">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="tag">Popular tracks</p>
+                    <h2>Courses students start with</h2>
+                </div>
+                <div class="grid three">
+                    <article class="course">
+                        <span class="pill">8 Weeks</span>
+                        <h3>Frontend Basics</h3>
+                        <p>Learn HTML, CSS, and JavaScript by building responsive pages from scratch.</p>
+                    </article>
+                    <article class="course">
+                        <span class="pill">10 Weeks</span>
+                        <h3>JavaScript Practice</h3>
+                        <p>Understand DOM events, small apps, and beginner-friendly logic exercises.</p>
+                    </article>
+                    <article class="course">
+                        <span class="pill">12 Weeks</span>
+                        <h3>Project Bootcamp</h3>
+                        <p>Combine layout, styling, and interactivity to create portfolio-ready work.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="wrap contact-box">
+                <div class="contact-text">
+                    <p class="tag">Start now</p>
+                    <h2>Build skills with steady progress</h2>
+                    <p>Join a simple learning experience designed for students who want practical frontend confidence.</p>
+                </div>
+                <form id="signupForm" class="form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name">
+                        <small class="error" aria-live="polite"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Email address">
+                        <small class="error" aria-live="polite"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" placeholder="Create a password">
+                        <small class="error" aria-live="polite"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm">Confirm Password</label>
+                        <input id="confirm" name="confirm" type="password" placeholder="Confirm password">
+                        <small class="error" aria-live="polite"></small>
+                    </div>
+                    <button class="btn btn-main" type="submit">Join Waitlist</button>
+                    <div id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>Success! You're on the waitlist.</div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
